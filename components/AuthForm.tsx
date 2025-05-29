@@ -1,3 +1,5 @@
+/** @format */
+
 "use client";
 
 import { z } from "zod";
@@ -110,8 +112,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="w-full space-y-6 mt-4 form"
-          >
+            className="w-full space-y-6 mt-4 form">
             {!isSignIn && (
               <FormField
                 control={form.control}
@@ -148,8 +149,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
           {isSignIn ? "No account yet?" : "Have an account already?"}
           <Link
             href={!isSignIn ? "/sign-in" : "/sign-up"}
-            className="font-bold text-user-primary ml-1"
-          >
+            className="font-bold text-user-primary ml-1">
             {!isSignIn ? "Sign In" : "Sign Up"}
           </Link>
         </p>
